@@ -6,6 +6,9 @@ const app = express();
 // Connect to Database
 connectDB();
 
+// Init Middleware
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('API Running'));
 
 app.get('/test', (req, res) => res.send('Pimmel'));
@@ -19,3 +22,5 @@ app.use('/api/posts', require('./routes/api/posts'));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on Port ${PORT}`));
+
+//const user = require("./models/User")
