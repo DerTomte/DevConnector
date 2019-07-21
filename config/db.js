@@ -13,4 +13,6 @@ const connectDB = async () => {
   }
 };
 
+const name = 'Peter';
+
 module.exports = connectDB;
